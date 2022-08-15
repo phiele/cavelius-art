@@ -78,7 +78,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={'/cavelius-art/'}>
       <Navbar cart={cart} />
       <div className="container">
         <Switch>
