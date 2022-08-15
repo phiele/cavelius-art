@@ -6,8 +6,30 @@ import About from "./About.js";
 import Products from "./Products.js";
 import ProductDetails from "./ProductDetails.js";
 import Cart from "./Cart.js";
+import useFetch from "./useFetch.js";
 
 function App() {
+  const [products, setProducts] = useState([]);
+  const { get } = useFetch(
+    "https://cavelius-art-api.herokuapp.com/api/v1/"
+  );
+
+  // fetch products from rails API
+  const getAPIdata = (request) => {
+    get(request)
+      .then((data) => {
+        // console.log(data)
+        setProducts(data);
+      })
+      .catch((error) => console.log(`Could not load ${request}`, error))
+      .finally(() => {console.log(`${request} loaded`)});
+  }
+
+  useEffect(() => {
+    getAPIdata("products.json")
+  }, []);
+
+  // save cart items to local storage
   const [cart, setCart] = useState(function () {
     let savedCart = [];
     try {
@@ -24,6 +46,7 @@ function App() {
     }
   }, [cart]);
 
+  // handle products in cart
   function handleProductDelete(id) {
     const updatedCart = cart.filter((product) => product.id !== id);
     setCart(updatedCart);
@@ -77,6 +100,7 @@ function App() {
     }
   }
 
+
   return (
     <HashRouter>
       <Navbar cart={cart} />
@@ -90,13 +114,17 @@ function App() {
           </Route>
           <Route exact path="/products">
             <Products
+              products={products}
               cart={cart}
               onProductPlus={handleProductPlus}
               onProductDelete={handleProductDelete}
             />
           </Route>
           <Route path="/products/:id">
-            <ProductDetails onProductPlus={handleProductPlus} />
+            <ProductDetails
+              products={products}
+              onProductPlus={handleProductPlus}
+            />
           </Route>
           <Route exact path="/cart">
             <Cart

@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
   NavLink,
   Link,
@@ -9,17 +8,15 @@ import {
 } from "react-router-dom";
 import ProductDetailInfo from "./ProductDetailInfo.js";
 import ProductDetailDelivery from "./ProductDetailDelivery.js";
-import productsObject from "./ProductsObject.js";
+// import productsObject from "./ProductsObject.js";
 import Button from "./Button.js";
 
 export default function ProductDetails(props) {
-  const [product, setProduct] = useState({});
   const params = useParams();
   const match = useRouteMatch();
 
-  useEffect(() => {
-    setProduct(productsObject[params.id - 1])
-  }, [])
+  // find product that matches the params.id
+  const product = props.products.find( prod => prod.id.toString() === params.id )
 
   return (
     <div className="product-details-layout">
@@ -27,7 +24,7 @@ export default function ProductDetails(props) {
         <div className="product-details-left">
           <Link to="/products">← back</Link>
           <img
-            src={product.image}
+            src={product.image_urls[0]}
             className="product-details-image"
             alt={product.name}
             />
