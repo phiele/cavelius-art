@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import Product from "./Product.js";
 import useFetch from "./useFetch.js";
 import Loader from "./Loader.js";
-import productsObject from "./ProductsObject.js"
+// import productsObject from "./ProductsObject.js" # import for testing
 
 export default function Products(props) {
   const [products, setProducts] = useState([]);
   const { get, loading } = useFetch(
-    "http://localhost:3000/api/v1/"
+    "https://cavelius-art-api.herokuapp.com/api/v1/"
   );
 
   const getAPIdata = (request) => {
@@ -23,10 +23,6 @@ export default function Products(props) {
   useEffect(() => {
     getAPIdata("products.json")
   }, []);
-
-  // console.log("PRODUCTS:")
-  // console.log(products)
-  // console.log(productsObject)
 
   return (
     <div className="products-layout">

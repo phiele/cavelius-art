@@ -4,13 +4,6 @@ body {
     Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 }
-/* a {
-  color: #00b99f;
-  transition: transform 150ms ease-out;
-}
-a:active {
-  color: #dc9f16;
-} */
 
 /* * {
   border: 1px solid red;
@@ -310,19 +303,12 @@ input:focus {
 
 /* Pages */
 .home-layout {
-  /* display: grid;
-  grid-template-columns: 1fr auto;
-  place-items: center;
-  grid-gap: 20px;
-  padding-top: 40px; */
   padding-top: 200px;
   text-align: center;
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 20px;
-  /* height: 74vh; */
-  /* overflow: hidden; */
 }
 
 .home-layout p {
@@ -353,14 +339,6 @@ input:focus {
   /* width: 100%; */
 }
 
-
-/* Products */
-/* .product:nth-child(2n):hover .product-image {
-  transform: scale(1.02);
-}
-.product:nth-child(2n + 1):hover .product-image {
-  transform: scale(1.02);
-} */
 
 /* PRODUCTS */
 .products-layout {
@@ -491,9 +469,6 @@ input:focus {
 
 /* CART */
 .cart-layout {
-  /* padding: 150px 50px;
-  background: var(--white); */
-  /* text-align: center; */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -560,16 +535,12 @@ input:focus {
 .cart-total {
   padding: 50px 50px;
   display: flex;
-  /* font-weight: 200; */
-  /* font-size: 1.2rem; */
-  /* border-bottom: 1px solid var(--black); */
 }
 
 .cart-total-positions {
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
-  /* border-bottom: 1px solid var(--neutral-5); */
 }
 
 .pay-form-btn {

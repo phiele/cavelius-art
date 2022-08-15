@@ -18,7 +18,6 @@ export default function About() {
         </p>
       </div>
       <img
-        // src="https://scontent-ber1-1.xx.fbcdn.net/v/t31.18172-8/17632050_1034687336633098_8236640676789672849_o.jpg?stp=cp0_dst-jpg_e15_fr_q65&_nc_cat=102&ccb=1-7&_nc_sid=2d5d41&_nc_ohc=6uc9uujkD0oAX8AZnKq&_nc_ht=scontent-ber1-1.xx&oh=00_AT9kF9kfZiMjW1VldaG3DX2lq1OQZrMU8v_3S_zCwX_vjQ&oe=630FAD1D"
         src={sofia}
         className="about-img"
         alt="avatar"

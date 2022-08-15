@@ -1,15 +1,11 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
-// import Input from "./Input.js";
 import Button from "./Button.js";
 
 // TODO: Replace with your own publishable key
 const stripeLoadedPromise = loadStripe("pk_test_51LQtUyLacYG8sMVCpQIHpTdGa5JsE8ogoGplCN5gsepXCzSBRvF2wej4c8bKFXc6SxO39lUr9dcjIekZz1uzHsmS00Fi4NhbR3");
 
 export default function Cart(props) {
-  // const [email, setEmail] = useState("");
-  // const [product, setProduct] = useState({});
   const { cart, onProductPlus, onProductMinus, onProductDelete } = props;
 
 
@@ -18,27 +14,10 @@ export default function Cart(props) {
     0
   );
 
-  // const existingProduct = cart.find(
-  //   (product) => product.id === newProduct.id
-  // );
-
-  // // store new price_ids from stripe
-  // const newPriceId = [
-  //   "price_1LRAXVLacYG8sMVCJxtrGZmc",
-  //   "price_1LRAYWLacYG8sMVC8KC2jIOT",
-  //   "price_1LRAdaLacYG8sMVCwbD8iu2B",
-  //   "price_1LRAeMLacYG8sMVCfof1RPG4"
-  // ]
-
   function handleFormSubmit(event) {
     event.preventDefault();
 
     const lineItems = cart.map((product, i) => {
-      // // overwrite price_ids from get request
-      // // console.log(i)
-      // // console.log(newPriceId[i])
-      // product = {...product, price_id: newPriceId[i]}
-      // // console.log(product)
       return { price: product.price_id, quantity: product.quantity };
     });
 
@@ -53,9 +32,8 @@ export default function Cart(props) {
         .redirectToCheckout({
           lineItems: lineItems,
           mode: "payment",
-          successUrl: "http://localhost:3000/cart",
-          cancelUrl: "http://localhost:3000/cart",
-          // customerEmail: email,
+          successUrl: "https://phiele.github.io/cavelius-art/cart",
+          cancelUrl: "https://phiele.github.io/cavelius-art/cart",
           shippingAddressCollection: shippingCountries
         })
         .then((response) => {
@@ -136,13 +114,6 @@ export default function Cart(props) {
               </div>
             </div>
             <form className="pay-form" onSubmit={handleFormSubmit}>
-              {/* <Input
-                placeholder="Email"
-                onChange={(event) => setEmail(event.target.value)}
-                value={email}
-                type="email"
-                required
-              /> */}
               <div className="pay-form-btn">
                 <div className="pay-form-btn-placement">
                   <Button type="submit">Checkout</Button>

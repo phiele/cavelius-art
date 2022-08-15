@@ -7,7 +7,6 @@ import {
   useParams,
   useRouteMatch,
 } from "react-router-dom";
-// import useFetch from "./useFetch.js";
 import ProductDetailInfo from "./ProductDetailInfo.js";
 import ProductDetailDelivery from "./ProductDetailDelivery.js";
 import productsObject from "./ProductsObject.js";
@@ -17,19 +16,6 @@ export default function ProductDetails(props) {
   const [product, setProduct] = useState({});
   const params = useParams();
   const match = useRouteMatch();
-  // const { get } = useFetch("https://react-tutorial-demo.firebaseio.com/");
-
-  // useEffect(() => {
-  //   get(`productinfo/id${params.id}.json`)
-  //     .then((data) => {
-  //       setProduct(data);
-  //     })
-  //     .catch((error) => console.log("Could not load product details", error));
-  // }, []);
-
-  // console.log("PRODUCTS:")
-  // console.log(products)
-  // console.log(productsObject)
 
   useEffect(() => {
     setProduct(productsObject[params.id - 1])
