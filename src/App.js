@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./Navbar.js";
 import Home from "./Home.js";
 import About from "./About.js";
@@ -78,7 +78,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter basename={'/cavelius-art/'}>
+    <HashRouter basename={'/cavelius-art/'}>
       <Navbar cart={cart} />
       <div className="container">
         <Switch>
@@ -108,7 +108,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
