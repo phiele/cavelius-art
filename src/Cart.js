@@ -32,8 +32,8 @@ export default function Cart(props) {
         .redirectToCheckout({
           lineItems: lineItems,
           mode: "payment",
-          successUrl: "https://phiele.github.io/cavelius-art/cart",
-          cancelUrl: "https://phiele.github.io/cavelius-art/cart",
+          successUrl: "https://phiele.github.io/cavelius-art/#/products",
+          cancelUrl: "https://phiele.github.io/cavelius-art/#/products",
           shippingAddressCollection: shippingCountries
         })
         .then((response) => {

@@ -78,7 +78,7 @@ function App() {
   }
 
   return (
-    <HashRouter basename={'/cavelius-art/'}>
+    <HashRouter>
       <Navbar cart={cart} />
       <div className="container">
         <Switch>
