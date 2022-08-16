@@ -1,22 +1,16 @@
 {
   "files": {
     "main.css": "/cavelius-art/static/css/main.8eb067cf.css",
-    "main.js": "/cavelius-art/static/js/main.769df60f.js",
-    "static/media/abstract_lines.jpg": "/cavelius-art/static/media/abstract_lines.203e288f32602a4d8fe2.jpg",
+    "main.js": "/cavelius-art/static/js/main.266ec3c0.js",
     "static/media/sofia.jpg": "/cavelius-art/static/media/sofia.18fb1e9ea4c18976f5af.jpg",
-    "static/media/thoughtful_woman.jpg": "/cavelius-art/static/media/thoughtful_woman.d484fbc7d1f38a3b3aa6.jpg",
-    "static/media/abstract_face.jpg": "/cavelius-art/static/media/abstract_face.250988bc7889e8de9c5e.jpg",
-    "static/media/bloom.jpg": "/cavelius-art/static/media/bloom.697a519040d2bf0677c9.jpg",
-    "static/media/simple_woman.jpg": "/cavelius-art/static/media/simple_woman.38e515bd751dcfefaa52.jpg",
-    "static/media/abstract_shapes.jpg": "/cavelius-art/static/media/abstract_shapes.8ed81a7486a9899a3e82.jpg",
     "index.html": "/cavelius-art/index.html",
     "static/media/cart_empty.svg": "/cavelius-art/static/media/cart_empty.a190ba9bb163ad4deef3431a94687d17.svg",
     "static/media/cart_full.svg": "/cavelius-art/static/media/cart_full.3776580b15833299935164f4d88727f1.svg",
     "main.8eb067cf.css.map": "/cavelius-art/static/css/main.8eb067cf.css.map",
-    "main.769df60f.js.map": "/cavelius-art/static/js/main.769df60f.js.map"
+    "main.266ec3c0.js.map": "/cavelius-art/static/js/main.266ec3c0.js.map"
   },
   "entrypoints": [
     "static/css/main.8eb067cf.css",
-    "static/js/main.769df60f.js"
+    "static/js/main.266ec3c0.js"
   ]
 }

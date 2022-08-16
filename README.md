@@ -2,5 +2,5 @@ SPA webshop built with React, Rails 7 API for product management, Cloudinary for
 
 Deployment:
 * run "npm run deploy" in the console
-* details steps to deploy the app on gh-pages are described in the following article:
+* detailed steps to deploy the app on gh-pages are described in the following article:
 https://create-react-app.dev/docs/deployment
