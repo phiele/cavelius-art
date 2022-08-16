@@ -1,11 +1,12 @@
 import Product from "./Product.js";
+import Loader from "./Loader.js";
 
 export default function Products(props) {
 
   return (
     <div className="products-layout">
       <h1>Gallery</h1>
-      {/* {loading && <Loader />} */}
+      {props.loading && <Loader />}
       <div className="products-grid">
         {props.products.map((product, i) => {
           return (

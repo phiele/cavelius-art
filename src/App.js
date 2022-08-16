@@ -10,7 +10,7 @@ import useFetch from "./useFetch.js";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const { get } = useFetch(
+  const { get, loading } = useFetch(
     "https://cavelius-art-api.herokuapp.com/api/v1/"
   );
 
@@ -114,6 +114,7 @@ function App() {
           </Route>
           <Route exact path="/products">
             <Products
+              loading={loading}
               products={products}
               cart={cart}
               onProductPlus={handleProductPlus}
