@@ -1,3 +1,4 @@
 # ignore node_modules to avoid commiting all libraries to your git repository
 node_modules
 build
+.env.*
