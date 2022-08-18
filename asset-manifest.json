@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/cavelius-art/static/css/main.8eb067cf.css",
-    "main.js": "/cavelius-art/static/js/main.dcba4bbc.js",
+    "main.js": "/cavelius-art/static/js/main.72ff8c76.js",
     "static/media/sofia.jpg": "/cavelius-art/static/media/sofia.18fb1e9ea4c18976f5af.jpg",
     "index.html": "/cavelius-art/index.html",
     "static/media/cart_empty.svg": "/cavelius-art/static/media/cart_empty.a190ba9bb163ad4deef3431a94687d17.svg",
     "static/media/cart_full.svg": "/cavelius-art/static/media/cart_full.3776580b15833299935164f4d88727f1.svg",
     "main.8eb067cf.css.map": "/cavelius-art/static/css/main.8eb067cf.css.map",
-    "main.dcba4bbc.js.map": "/cavelius-art/static/js/main.dcba4bbc.js.map"
+    "main.72ff8c76.js.map": "/cavelius-art/static/js/main.72ff8c76.js.map"
   },
   "entrypoints": [
     "static/css/main.8eb067cf.css",
-    "static/js/main.dcba4bbc.js"
+    "static/js/main.72ff8c76.js"
   ]
 }
