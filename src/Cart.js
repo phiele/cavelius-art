@@ -63,7 +63,7 @@ export default function Cart(props) {
                     <div className="cart-product-name">
                       <Link to={`/products/${product.id}`}>
                         <img
-                          src={product.image}
+                          src={product.image_urls[0]}
                           width="60"
                           height="60"
                           alt=""
