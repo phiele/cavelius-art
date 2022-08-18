@@ -7,7 +7,7 @@ import Products from "./Products.js";
 import ProductDetails from "./ProductDetails.js";
 import Cart from "./Cart.js";
 import useFetch from "./useFetch.js";
-import { printful } from "../lib/printful-client";
+import { printful } from "./lib/printful-client";
 
 function App() {
   const [products, setProducts] = useState([]);
